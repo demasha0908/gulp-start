@@ -1,0 +1,527 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'tabs';
+
+.header {
+    height: 55px;
+    margin-top: 32px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 0.5px;
+    }
+
+    &__sign-btn {
+        height: 55px;
+        background-color: transparent;
+        border: none;
+        color: $green;
+        @extend %menu-font;
+        line-height: 24px;
+        padding: 16px 48px 15px;
+        cursor: pointer;
+        letter-spacing: 0.0025em;
+        margin-right: 8px;
+    }
+
+    &__login-btn {
+        background-color: $green;
+        color: #fff;
+        border: none;
+        padding: 16px 48px 15px;
+        @extend %menu-font;
+        line-height: 24px;
+        cursor: pointer;
+        letter-spacing: 0.0025em;
+    }
+}
+
+.menu {
+    font-size: 18px;
+
+
+    &__list {
+        display: flex;
+        padding: 7px 32px 7px 0;
+    }
+
+    &__list-item {
+        margin-right: 48px;
+        padding: 7px 0 7px 0;
+    }
+
+    &__list-item:last-child {
+        margin-right: 0px;
+    }
+
+    &__list-item--active {
+        padding-top: 0;
+    }
+
+    &__list-link {
+        color: #8E8E8E;
+        @extend %menu-font;
+        font-size: 18px;
+        padding: 7px 0 7px 0;
+    }
+
+    &__list-link--active {
+        color: $green;
+        position: relative;
+        padding-bottom: 8px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            top: 41px;
+            right: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: $green;
+        }
+    }
+}
+
+
+.top {
+
+    margin-top: 65px;
+    padding-bottom: 147px;
+    position: relative;
+
+    &__inner {
+        max-width: 751px;
+        max-height: 654px;
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+        padding-bottom: 109px;
+    }
+
+    &__title {
+        margin: 32px 0 24px;
+        @extend %title-font;
+        color: $darkblue;
+        font-size: 64px;
+        line-height: 74px;
+        letter-spacing: 0.0025em;
+        max-width: 605px;
+    }
+
+    &__text {
+        color: $darkgrey;
+        line-height: 24px;
+        letter-spacing: 0.0025em;
+        max-width: 502px;
+        margin-bottom: 64px;
+    }
+
+    &__img {
+        position: absolute;
+        max-width: 798px;
+        top: 0;
+        right: 0;
+    }
+
+}
+
+.discover {
+    background-color: $white;
+    padding: 120px 0;
+
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__title-text {
+        width: 492px;
+        color: $darkgrey;
+        margin-bottom: 48px;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 34px;
+    }
+
+    &__item {
+        border: 1px solid #DEDCDA;
+        padding: 16px;
+    }
+
+    &__img {
+        width: 344px;
+        height: 238px;
+        margin-bottom: 16px;
+    }
+
+    &__item-title {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.0025em;
+        color: $darkblue;
+    }
+
+    &__item-place {
+        display: inline-block;
+        margin-bottom: 16px;
+        color: $grey;
+        letter-spacing: 0.0025em;
+    }
+
+    &__price-box {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-price {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $green;
+        letter-spacing: 0.0025em;
+    }
+
+    &__item-area {
+        background-color: $lightgrey;
+        color: $grey;
+    }
+
+    &__item-meter {
+        color: $darkblue;
+    }
+
+    &__item-btn {
+        padding: 12px 48px;
+        border: 1px solid $green;
+        color: $green;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.0025em;
+        width: 344px;
+        height: 48px;
+
+        &:hover {
+            color: $white;
+            background-color: $green;
+            box-shadow: 0px 0px 20px rgba(105, 185, 157, 0.58);
+            transition: all 1s ease;
+        }
+    }
+}
+
+.advante {
+    height: 954px;
+    padding: 80px 0 80px 0;
+
+    &__title {
+        width: 436px;
+    }
+
+    &__gap {
+        padding-top: 48px;
+        display: grid;
+        height: 268px;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 32px 32px;
+    }
+
+    &__item-title {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: 0.5px;
+        color: $blue;
+    }
+
+    &__item-text {
+        color: $darkgrey;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.about {
+    background-color: $white;
+    padding: 120px 0;
+
+
+    &__inner {
+        position: relative;
+        padding-top: 92px;
+        display: grid;
+        grid-template-columns: 609px 527px;
+        grid-gap: 54px;
+    }
+
+    &__star-done {
+        position: absolute;
+        bottom: 223px;
+        left: 74px;
+        box-shadow: 0px 0px 38px rgba(105, 185, 157, 0.32);
+    }
+
+    &__review-star {
+        text-align: center;
+        background-color: $white;
+        padding: 32px;
+        position: absolute;
+        bottom: 319px;
+        left: 96px;
+        box-shadow: 35px 35px 65px rgba(146, 106, 120, 0.16);
+    }
+
+    &__star-number {
+        font-size: 72px;
+        line-height: 80px;
+        letter-spacing: 0.25px;
+        color: $blue;
+        margin-bottom: 8px;
+    }
+
+    &__star-many {
+        width: 100%;
+    }
+
+    &__star-trust {
+        margin: 16px 0 2px;
+
+        line-height: 24px;
+        letter-spacing: 0.0025em;
+        color: $grey;
+    }
+
+    &__star-reviews {
+        line-height: 24px;
+        letter-spacing: 0.0025em;
+        color: $blue;
+    }
+
+    &_img {
+        width: 609px;
+        height: 475px;
+    }
+
+    &__review-count {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 32px;
+        position: absolute;
+        bottom: 0;
+        left: 94px;
+        width: 515px;
+        height: 82px;
+        padding: 15px 32px;
+        background-color: $white;
+    }
+
+    &__count {
+        display: flex;
+    }
+
+    &__count-big {
+        color: $blue;
+        margin-right: 8px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        letter-spacing: 0.0025em;
+    }
+
+    &__count-text {
+        color: $grey;
+        letter-spacing: 0.0025em;
+    }
+
+    &__text-small {
+        margin-top: 16px;
+        margin-bottom: 48px;
+        color: $darkgrey;
+        width: 505px;
+    }
+
+}
+
+.customer {
+    background-color: $white;
+    height: 640px;
+    padding-bottom: 120px;
+
+    &__gap {
+        padding-top: 48px;
+        display: grid;
+        height: 268px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px 32px;
+    }
+
+
+
+    &__item {
+        border: 1px solid #DEDCDA;
+        padding: 24px;
+    }
+
+    &__item-title {
+        color: $darkblue;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.0025em;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    &__item-text {
+        margin-bottom: 24px;
+        width: 328px;
+        color: $darkblue;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.0025em;
+    }
+
+    &__gap-author {
+        display: flex;
+    }
+
+    &__author-img {
+        margin-right: 16px;
+    }
+
+    &__author-title {
+        color: $darkgreen;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    &__author-text {
+        font-family: 'Nunito Sans';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+.footer {
+
+    &__content {
+        background-color: $lightgrey;
+        padding: 75px 0 80px;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__logo {
+        margin-bottom: 16px;
+    }
+
+    &__info {
+        width: 351px;
+        margin-right: 214px;
+    }
+
+    &__info-text {
+        margin-bottom: 24px;
+        letter-spacing: 0.25px;
+    }
+
+    &__title {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        margin-bottom: 16px;
+        color: $darkgreen;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__form {
+        width: 351px;
+        display: flex;
+    }
+
+    &__form-input {
+        padding: 8px 109px 8px 16px;
+        background-color: $white;
+        border: none;
+        width: 263px;
+
+        &::placeholder {
+            color: #D7D7D7;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+
+    &__form-btn {
+        color: $white;
+        background-color: $green;
+        padding: 8px 21px 8px 24px;
+        border: none;
+        font-weight: 500;
+        box-shadow: 0px 0px 65px rgba(105, 185, 157, 0.48);
+    }
+
+    &__service {
+        margin-right: 80px;
+    }
+
+    &__link {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 400;
+        color: #575757;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__item {
+        margin-bottom: 16px;
+    }
+
+    &__community {
+        margin-right: 137px;
+    }
+
+    &__social-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-item {
+        margin-right: 16px;
+    }
+
+    &__social-item:last-child {
+        margin-right: 0;
+    }
+
+}
